@@ -1,0 +1,5 @@
+{
+    "home_station": "999N",
+    "train_1": ["B", "D"],
+    "train_2": ["Q", "R", "W"]
+}
