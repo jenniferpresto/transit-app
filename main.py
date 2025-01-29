@@ -25,8 +25,9 @@ def get_trains():
     feed2 = NYCTFeed(TRAIN_2)
     trains2 = feed2.filter_trips(line_id=LINE_IDS_2, headed_for_stop_id=[HOME_STATION_ID])
     print("Num trains: {}".format(len(trains1)))
-    print("Next train: {}".format(str(trains1[0])))
-    print("{} remaining stops".format(len(trains1[0].stop_time_updates)))
+    if len(trains1):
+        print("Next train: {}".format(str(trains1[0])))
+        print("{} remaining stops".format(len(trains1[0].stop_time_updates)))
     future_stops_1 = []
     future_stops_2 = []
 
